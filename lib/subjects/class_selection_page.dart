@@ -15,7 +15,7 @@ class ClassSelectionPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
-        title: Text("Course Level"),
+        title: const Text("Course Level"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -34,26 +34,26 @@ class ClassSelectionPage extends StatelessWidget {
   
   Widget classTile(BuildContext context, String name, String abbreviation, String desc, String term) {
     return InkWell(
-      onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => ClassRegistrationPage())),
+      onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ClassRegistrationPage())),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(name, style: TextStyle(fontWeight: FontWeight.bold),),
+              Text(name, style: const TextStyle(fontWeight: FontWeight.bold),),
               Text(desc),
-              Text(term, style: TextStyle(color: Colors.grey),)
+              Text(term, style: const TextStyle(color: Colors.grey),)
             ],
           ),
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.deepPurpleAccent,
               borderRadius: BorderRadius.all(Radius.circular(10.0))
             ),
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Text(abbreviation, style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),),
+              child: Text(abbreviation, style: const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),),
             ),
           )
         ],

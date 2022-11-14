@@ -13,13 +13,13 @@ class CourseLevelPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
-        title: Text("Course Level"),
+        title: const Text("Course Level"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView.separated(
             itemBuilder: (ctx, index) {
-              return SubjectsNavigationTile(abbreviation: ((index+1)*100).toString(), text: levels[index], route: MaterialPageRoute(builder: (context) => ClassSelectionPage()));
+              return SubjectsNavigationTile(abbreviation: ((index+1)*100).toString(), text: levels[index], route: MaterialPageRoute(builder: (context) => const ClassSelectionPage()));
             },
             separatorBuilder: (context, index) {
               return const Divider();

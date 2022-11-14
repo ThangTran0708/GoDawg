@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_dawg/Widgets/text_field_appbar.dart';
-import 'package:go_dawg/subjects/subject_handler.dart';
 import 'package:go_dawg/subjects/term_page.dart';
 
 
@@ -63,7 +62,7 @@ class _SubjectsPageState extends State<SubjectsPage> {
             image: DecorationImage(
               image: AssetImage(image),
               fit: BoxFit.cover,
-              colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
+              colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
             ),
           ),
           child: Center(child: Text(name, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white, fontSize: 19.0, fontWeight: FontWeight.bold), maxLines: 2, overflow: TextOverflow.ellipsis,)),

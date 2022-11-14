@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
-import 'package:vector_math/vector_math.dart' as vmath;
-import 'dart:math' as math;
 
 class ClassRegistrationPage extends StatefulWidget {
   const ClassRegistrationPage({Key? key}) : super(key: key);
@@ -14,13 +11,11 @@ class ClassRegistrationPage extends StatefulWidget {
 
 class _ClassRegistrationPageState extends State<ClassRegistrationPage> {
 
-  GlobalKey _globalKey = GlobalKey();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("CS 170"),
+        title: const Text("CS 170"),
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Padding(
@@ -36,14 +31,14 @@ class _ClassRegistrationPageState extends State<ClassRegistrationPage> {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          children: [
-                            const Text("Intro to Computer Science I", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                            const Text("CS Spring 2023", style: TextStyle(color: Colors.grey, fontSize: 18.0),),
+                          children: const [
+                            Text("Intro to Computer Science I", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),),
+                            Text("CS Spring 2023", style: TextStyle(color: Colors.grey, fontSize: 18.0),),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(height: 15.0,),
+                    const SizedBox(height: 15.0,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -56,13 +51,13 @@ class _ClassRegistrationPageState extends State<ClassRegistrationPage> {
                           ],
                         ),
                         Container(
-                          child: const Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: Icon(Icons.person, color: Colors.white,),
-                          ),
                           decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.deepPurpleAccent
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child: Icon(Icons.person, color: Colors.white,),
                           ),
                         )
                       ],

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:go_dawg/subjects/course_level_page.dart';
 
 class SubjectsNavigationTile extends StatelessWidget {
   final String abbreviation;

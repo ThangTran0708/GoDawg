@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_dawg/Widgets/subjects_navigation_tile.dart';
 import 'package:go_dawg/subjects/course_level_page.dart';
@@ -16,13 +15,13 @@ class TermPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
-        title: Text("Term"),
+        title: const Text("Term"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView.separated(
             itemBuilder: (ctx, index) {
-              return SubjectsNavigationTile(abbreviation: abbreviation, text: terms[index], route: MaterialPageRoute(builder: (context) => CourseLevelPage()));
+              return SubjectsNavigationTile(abbreviation: abbreviation, text: terms[index], route: MaterialPageRoute(builder: (context) => const CourseLevelPage()));
             },
             separatorBuilder: (context, index) {
               return const Divider();
